@@ -1,0 +1,38 @@
+<div class="contenedor">
+    <h3>Registro</h3>
+
+    <br>
+    <form [formGroup]="registerForm">
+
+        <div class="form-row mb-3">
+            <div class="col-5">
+                <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre"
+                    (keyup)="mostrarName()">
+            </div>
+            <div class="col-7">
+                <input type="text" class="form-control" placeholder="Teléfono" formControlName="telefono">
+            </div>
+        </div>
+        <div class="form-row mb-3">
+            <div class="col-5">
+                <input type="text" class="form-control" placeholder="Cédula" formControlName="cedula">
+            </div>
+            <div class="col-7">
+                <input type="date" class="form-control" placeholder="Fecha Nacimiento"
+                    formControlName="fechaNacimiento">
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Dirección" formControlName="direccion">
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary" (click)="registerClient()">Guardar</button>
+
+    </form>
+    <br><br>
+    <app-list [clientes]="clientes"></app-list>
+
+</div>

@@ -1,0 +1,12 @@
+<h3>Historial Notificaciones Clientes Guardados</h3>
+
+<div>
+    <div *ngFor="let cliente of clientes" class="card mb-3" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{cliente.nombre}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{getAnoCliente(cliente)}} años</h6>
+            <button type="button" class="btn btn-danger" (click)="deleteClient(cliente)">Eliminar</button>
+        </div>
+   
+    </div>
+</div>
